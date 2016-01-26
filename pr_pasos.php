@@ -85,8 +85,9 @@
         });
       }
     </script>
+    <html>
 	 <body onload="initialize()","initialize2()">
-	 	<body >
+	
 <?php
 
 //$sql = "SELECT * FROM usuario ORDER BY id_user ASC";
@@ -95,13 +96,14 @@
 ?>
 
 <div class="containermod2">
-					
+			<div class="form">		
 		<form action="registar_user.php" method="GET">
+      <div class="datos">
 			Mail:
 			<input type="mail" name="mail" maxlength="50" size="30">
 			Nombre:
 			<input type="text" name="nombre" size="30" maxlength="30">
-			Apellido:
+			<br>Apellido:
 			<input type="text" name="apellido" size="30" maxlength="30">
 			teléfono:
 			<input type="tel" name="telefono" size="30">
@@ -110,19 +112,13 @@
      			<input type="button" value="Geocode" onclick="codeAddress()"><br>
       			latitud<input type="text" id="lat"/>
       			longitud<input type="text" id="lng"/>
-    		
+    		</div>
+        </div>
     		<div id="map_canvas" style="height:60%;top:30px"></div>
 		    <br/>
-		    </div>
-		    <div class="infomap">
-      			dirección 2:<input id="address2" type="textbox" style="width:60%" value="barcelona">
-     			<input type="button" value="Geocode2" onclick="codeAddress2()"><br>
-      			latitud<input type="text" id="lat2"/>
-      			longitud<input type="text" id="lng2"/>
-    		
-    		<div id="map_canvas2" style="height:60%;top:30px"></div>
-		    <br/>
-		    </div>
+        <br/>
+        <br/>
+		    
 		    <br><br>
 			<input type="submit" value="Enviar">
 
@@ -130,4 +126,6 @@
 		</form>
 		<a href="usuarios.php">volver!</a>
 			</div>
-			
+    </div>
+</body>
+</html>
