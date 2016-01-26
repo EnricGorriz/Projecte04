@@ -10,8 +10,8 @@ USE `bd_contactes`;
 	  `usu_email` varchar(80) NULL,
 	  `usu_contra` varchar(30) NULL,
 	  `usu_validat` boolean default false,
-	  `usu_latitut` varchar(10) NULL,
-	  `usu_longitut` varchar(10) NULL
+	  `usu_latitut` varchar(25) NULL,
+	  `usu_longitut` varchar(25) NULL
 	)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*ASSIGNACIÓ DE CLAU PRIMARIA*/
 			ALTER TABLE `tbl_Usuari`
@@ -39,10 +39,10 @@ roger@fje.edu - qwerqwer
 	  `con_adreça_casa` varchar(90) NULL,
 	  `con_adreça_alternativa` varchar(90) NULL,
 	  `con_telefon` int (9) NULL,
-	  `con_latitut_principal` varchar(30) NULL,
-	  `con_longitut_principal` varchar(30) NULL,
-	  `con_latitut_alternativa` varchar(30) NULL,
-	  `con_longitut_alternativa` varchar(30) NULL
+	  `con_latitut_principal` varchar(25) NULL,
+	  `con_longitut_principal` varchar(25) NULL,
+	  `con_latitut_alternativa` varchar(25) NULL,
+	  `con_longitut_alternativa` varchar(25) NULL
 	)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*ASSIGNACIÓ DE CLAU PRIMARIA*/
 			ALTER TABLE `tbl_Contactes`
