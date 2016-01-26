@@ -46,47 +46,10 @@
           }
         });
       }
-      ///////////////////mapa2///////////////////
-         var geocoder2;
-      var map2;
-      var mapOptions2 = {
-          zoom: 17,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-      var marker2;
-
-      function initialize2() {
-        geocoder2 = new google.maps.Geocoder();
-        map2 = new google.maps.Map(document.getElementById('map_canvas2'), mapOptions);
-        codeAddress2();
-      }
-
-      function codeAddress2() {
-        var address2 = document.getElementById('address').value;
-        geocoder.geocode( { 'address': address2}, function(results, status2) {
-          if (status2 == google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
-            if(marker2)
-              marker2.setMap(null);
-            marker2 = new google.maps.Marker({
-                map: map,
-                position: results[0].geometry.location,
-                draggable: true
-            });
-            google.maps.event.addListener(marker, "dragend", function() {
-              document.getElementById('lat2').value = marker.getPosition().lat();
-              document.getElementById('lng2').value = marker.getPosition().lng();
-            });
-            document.getElementById('lat2').value = marker.getPosition().lat();
-            document.getElementById('lng2').value = marker.getPosition().lng();
-          } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          }
-        });
-      }
+      
     </script>
     <html>
-	 <body onload="initialize()","initialize2()">
+	 <body onload="initialize()">
 	
 <?php
 
@@ -94,38 +57,52 @@
 //$datos = mysqli_query($con, $sql);
 
 ?>
+<div class="primerospasos">
+  <h2>Primeros Pasos</h2>
+  <p>Bienvenido y muchas gracias por registrarte.</p>
+  <p>Antes de empezar con tu agenda personalizada tienes que completar la información de tu perfil.</p>
+  </div>
 
 <div class="containermod2">
 			<div class="form">		
 		<form action="registar_user.php" method="GET">
       <div class="datos">
-			Mail:
-			<input type="mail" name="mail" maxlength="50" size="30">
-			Nombre:
-			<input type="text" name="nombre" size="30" maxlength="30">
-			<br>Apellido:
-			<input type="text" name="apellido" size="30" maxlength="30">
-			teléfono:
-			<input type="tel" name="telefono" size="30">
+        <div class="datosder">
+          <h3>Nombre: *</h3>
+      <input type="text" name="nombre" size="30" maxlength="30" required>
+      <br>
+      <h3>Teléfono: *</h3>
+      <input type="tel" name="telefono" size="30" required>
+      <br>
+    </div>
+      <div class="datosiz">
+        <h3>Apellido: *</h3>
+      <input type="text" name="apellido" size="30" maxlength="30" required>
+        
+			
+      </div>
+      <div class="datoscen">
 			<div class="infomap">
-      			dirección 1:<input id="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
-     			<input type="button" value="Geocode" onclick="codeAddress()"><br>
-      			latitud<input type="text" id="lat"/>
-      			longitud<input type="text" id="lng"/>
+<br>
+      			<h3>Dirección: * </h3><input id="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
+     			<input type="button" value="Verificar" onclick="codeAddress()" required><br><br>
+      			Latitud: <input type="text" id="lat"/><br>
+            <br>Longitud:<input type="text" id="lng"/>
     		</div>
         </div>
-    		<div id="map_canvas" style="height:60%;top:30px"></div>
-		    <br/>
-        <br/>
-        <br/>
-		    
-		    <br><br>
+      </div>
+      <br>
+        <div class="buttons">
 			<input type="submit" value="Enviar">
-
+      <button>
+    <a href="usuarios.php">Volver!</a>
+    </button>
+        </div>
 
 		</form>
-		<a href="usuarios.php">volver!</a>
+    
 			</div>
     </div>
+    <div id="map_canvas" style="height:40%;top:30px;width:80%"></div>
 </body>
 </html>

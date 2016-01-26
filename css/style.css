@@ -4,20 +4,23 @@ body {
   line-height: 1.42857;
 
 }
+h2 {
+  text-align: center;
+}
 .containermod {
   background: transparent none repeat scroll 0 0;
   border: 4px solid white;
   border-radius: 5px;
   margin-left: 40%;
   margin-top: 2%;
+  margin-bottom: 2%;
   max-width: 140px;
   padding: 2%;
 }
 .containermod2 {
   background: transparent none repeat scroll 0 0;
-  border: 4px solid white;
-  border-radius: 5px;
-  margin-left: 20%;
+  float: right;
+  margin-right: 10%;
   margin-top: 2%;
   max-width: 50%;
   padding: 1%;
@@ -29,15 +32,73 @@ body {
 }
 
 input {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   max-width: 100%;
 }
 .datos {
   background: transparent none repeat scroll 0 0;
   border: 5px solid white;
   border-radius: 5px;
-  padding: 2%;
+  padding: 4%;
 }
-#map_canvas{
+#map_canvas {
+  border: 5px solid white;
   border-radius: 5px;
+  margin-left: 10%;
+}
+.datosder {
+  float: left;
+  width: 50%;
+}
+.datosiz {
+  float: right;
+  width: 50%;
+}
+.datoscen {
+  margin-left: 0%;
+  margin-top: 33%;
+}
+.buttons {
+  float: right;
+}
+.buttons > input {
+  background-color: #00789d;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+}
+.buttons > input:hover{
+  background-color: #99E5FF;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+  
+}
+button {
+    background-color: #00789d;
+  border-color: white;
+  border-radius: 5px;
+  color: white;
+}
+button:hover{
+  background-color: #99E5FF;
+  border-color: white;
+  border-radius: 5px;
+  color: #00789d;
+ 
+}
+.buttons a {
+  color: white;
+  text-decoration: none;
+}
+
+.primerospasos {
+  background: transparent none repeat scroll 0 0;
+  border: 4px solid white;
+  border-radius: 5px;
+  float: left;
+  margin-left: 30%;
+  margin-top: 7%;
+  max-width: 15%;
+  padding: 1%;
 }
