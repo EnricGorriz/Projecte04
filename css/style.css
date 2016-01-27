@@ -35,6 +35,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
   max-width: 50%;
   padding: 1%;
 }
+.containermod3 {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 15%, rgba(181, 198, 208, 1) 73%, rgba(224, 239, 249, 1) 100%) repeat scroll 0 0;
+  border-radius: 5px;
+  float: right;
+  margin-right: 40%;
+  margin-top: 2%;
+  max-width: 50%;
+  padding: 1%;
+}
 .form {
   display: block;
   padding: 3px;
