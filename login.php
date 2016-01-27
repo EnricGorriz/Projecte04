@@ -16,16 +16,23 @@
 ?>
 
 <div class="containermod">
-					
+
+		<div class="form">			
 		<form action="registar_user.php" method="GET">
 			Mail:<br>
 			<input type="mail" name="mail" maxlength="50"><br>
 			Contraseña:<br>
         	<input type="password" name="pass" class="form-input" required/><br><br>
+        	<div class="buttons">
 			<input type="submit" value="Enviar">
+		</div>
+				
 
 		</form>
-		
-			</div>
+		</div>
+</div>
+<div class="logoi">
+  				<img src="img/logo2.png">
+				</div>
 		
 	</body>

@@ -1,5 +1,6 @@
 <?php
 	//include_once 'conexion.php';
+include_once 'header.php';
 ?>
  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
  	<link rel="stylesheet" href="css/style.css">
@@ -57,6 +58,9 @@
 //$datos = mysqli_query($con, $sql);
 
 ?>
+<div class="logo">
+  <img src="img/logo2.png">
+</div>
 <div class="primerospasos">
   <h2>Primeros Pasos</h2>
   <p>Bienvenido y muchas gracias por registrarte.</p>
@@ -105,4 +109,7 @@
     </div>
     <div id="map_canvas" style="height:40%;top:30px;width:80%"></div>
 </body>
+<?php  
+  include 'footer.php';
+?>
 </html>

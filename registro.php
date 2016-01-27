@@ -1,5 +1,6 @@
 <?php
 	//include_once 'conexion.php';
+include_once 'header.php';
 ?>
 <html>
 	<head>
@@ -25,10 +26,21 @@
         	Repite la Contraseña:<br>
         	<input type="password" name="pass2" class="form-input" required/><br>
 		    <br/>
+		    <div class="buttons">
 			<input type="submit" value="Enviar">
-
+			<a href="usuarios.php">volver!</a>
+				
+		</div>
+			
 		</form>
-		<a href="usuarios.php">volver!</a>
+		
 			</div>
+			<div class="logoin">
+  				<img src="img/logo2.png">
+				</div>
 		
 	</body>
+<?php  
+	include 'footer.php';
+?>
+</html>
