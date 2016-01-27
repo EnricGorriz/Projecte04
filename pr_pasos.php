@@ -1,6 +1,8 @@
 <?php
-	//include_once 'conexion.php';
-include_once 'header.php';
+	Session_Start();
+		if(isset($_SESSION['mail']))$login=1;
+		if(isset($login)){
+		include_once 'header.php';
 ?>
  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
  	<link rel="stylesheet" href="css/style.css">
@@ -51,13 +53,6 @@ include_once 'header.php';
     </script>
     <html>
 	 <body onload="initialize()">
-	
-<?php
-
-//$sql = "SELECT * FROM usuario ORDER BY id_user ASC";
-//$datos = mysqli_query($con, $sql);
-
-?>
 <div class="logo">
   <img src="img/logo2.png">
 </div>
@@ -69,7 +64,8 @@ include_once 'header.php';
 
 <div class="containermod2">
 			<div class="form">		
-		<form action="registar_user.php" method="GET">
+		<form action="primercontacto.proc.php" method="POST">
+		<input type="hidden" name="login"/>
       <div class="datos">
         <div class="datosder">
           <h3>Nombre: *</h3>
@@ -88,19 +84,17 @@ include_once 'header.php';
       <div class="datoscen">
 			<div class="infomap">
 <br>
-      			<h3>Dirección: * </h3><input id="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
+      			<h3>Dirección: * </h3><input id="address" name="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
      			<input type="button" value="Verificar" onclick="codeAddress()" required><br><br>
-      			Latitud: <input type="text" id="lat"/><br>
-            <br>Longitud:<input type="text" id="lng"/>
+      			Latitud: <input type="text" id="lat" name="lat"/><br>
+            <br>Longitud:<input type="text" id="lng" name="lng"/>
     		</div>
         </div>
       </div>
       <br>
         <div class="buttons">
 			<input type="submit" value="Enviar">
-      <button>
-    <a href="usuarios.php">Volver!</a>
-    </button>
+
         </div>
 
 		</form>
@@ -113,3 +107,10 @@ include_once 'header.php';
   include 'footer.php';
 ?>
 </html>
+<?php
+	}else{
+		$_SESSION['validarse'] = 'error';
+		header("Location: login.php");
+		die();
+	}
+?>

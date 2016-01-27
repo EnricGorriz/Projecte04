@@ -59,4 +59,3 @@ roger@fje.edu - qwerqwer
 		ALTER TABLE `tbl_Contactes`
 		ADD CONSTRAINT FOREIGN KEY (usu_id)
 		REFERENCES `tbl_Usuari` (usu_id);
-
