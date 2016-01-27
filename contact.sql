@@ -8,7 +8,7 @@ USE `bd_contactes`;
 	CREATE TABLE IF NOT EXISTS `tbl_Usuari` (
 	  `usu_id` int(11) NOT NULL,
 	  `usu_email` varchar(80) NULL,
-	  `usu_contra` varchar(30) NULL,
+	  `usu_contra` varchar(40) NULL,
 	  `usu_validat` boolean default false,
 	  `usu_latitut` varchar(25) NULL,
 	  `usu_longitut` varchar(25) NULL
@@ -36,8 +36,8 @@ roger@fje.edu - qwerqwer
 	  `con_email` varchar(80) NULL,
 	  `con_nom` varchar(30) NULL,
 	  `con_cognom` varchar(50) NULL,
-	  `con_adreça_casa` varchar(90) NULL,
-	  `con_adreça_alternativa` varchar(90) NULL,
+	  `con_direccio_principal` varchar(90) NULL,
+	  `con_direccio_alternativa` varchar(90) NULL,
 	  `con_telefon` int (9) NULL,
 	  `con_latitut_principal` varchar(25) NULL,
 	  `con_longitut_principal` varchar(25) NULL,
@@ -59,3 +59,4 @@ roger@fje.edu - qwerqwer
 		ALTER TABLE `tbl_Contactes`
 		ADD CONSTRAINT FOREIGN KEY (usu_id)
 		REFERENCES `tbl_Usuari` (usu_id);
+
