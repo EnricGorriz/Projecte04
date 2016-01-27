@@ -8,21 +8,12 @@ h2 {
   text-align: center;
 }
 .containermod {
- 
-background: rgba(242,246,248,1);
-background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 15%, rgba(181,198,208,1) 73%, rgba(224,239,249,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(15%, rgba(216,225,231,1)), color-stop(73%, rgba(181,198,208,1)), color-stop(100%, rgba(224,239,249,1)));
-background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 15%, rgba(181,198,208,1) 73%, rgba(224,239,249,1) 100%);
-background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 15%, rgba(181,198,208,1) 73%, rgba(224,239,249,1) 100%);
-background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 15%, rgba(181,198,208,1) 73%, rgba(224,239,249,1) 100%);
-background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 15%, rgba(181,198,208,1) 73%, rgba(224,239,249,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
-
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 15%, rgba(181, 198, 208, 1) 73%, rgba(224, 239, 249, 1) 100%) repeat scroll 0 0;
   border: 4px solid white;
   border-radius: 5px;
-  margin-left: 38%;
-  margin-top: 7%;
   margin-bottom: 2%;
+  margin-left: 33%;
+  margin-top: 8%;
   max-width: 140px;
   padding: 3%;
 }
@@ -194,7 +185,7 @@ button:hover{
 }
 .logoi {
   display: block;
-  margin: -18% 0 0 4%;
+  margin: -17% 0 0 4%;
   padding: 0;
   text-align: left;
 }
@@ -207,16 +198,7 @@ ul {
   margin-right: 0;
   margin-top: 0;
   overflow: hidden;
-  padding: 0 0 0 50%;
-}
-ul {
-  background-color: #333;
-  list-style-type: none;
-  margin-bottom: 0;
-  margin-right: 0;
-  margin-top: 0;
-  overflow: hidden;
-  padding: 0 0 0 50%;
+  padding: 0 0 0 47%;
 }
 
 li {
@@ -236,4 +218,23 @@ li a:hover {
 }
 .headperfil {
   margin-left: -7%;
+}
+.tit {
+  background: #333333 none repeat scroll 0 0;
+  color: white;
+  text-align: center;
+}
+.info {
+  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 15%, rgba(181, 198, 208, 1) 73%, rgba(224, 239, 249, 1) 100%) repeat scroll 0 0;
+  border: 4px solid white;
+  border-radius: 5px;
+  float: right;
+  margin-right: 10%;
+  margin-top: -24%;
+  max-width: 29%;
+  padding: 1%;
+}
+.regis {
+  color: white;
+  margin-top: -14px;
 }

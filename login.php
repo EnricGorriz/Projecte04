@@ -3,6 +3,7 @@
 		if(isset($_SESSION['error'])) $error = $_SESSION['error'];
 		if(isset($_SESSION['validarse'])) $validarse = $_SESSION['validarse'];
 	session_destroy();
+		include_once 'header_login.php';
 ?>
 <html>
 	<head>
@@ -35,5 +36,12 @@
 		<div class="logoi">
 			<img src="img/logo2.png">
 		</div>
+		<div class="info">
+  <h2>Mycontacts</h2>
+  <p>La nueva agenda web online llega a España.</p>
+  <p>Con esta nueva web podrás crear listas de contactos geolocalizados.</p>
+  <p>Introducce hasta dos direcciones por contacto, geolocaliza su ubicación y llega hasta el.</p>
+  <p>Visualización de todos tus contactos en un mismo mapa, <br>Quien esta mas cerca?.</p>
+  </div>
 	</body>
 </html>
