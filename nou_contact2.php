@@ -56,27 +56,30 @@ include_once 'header_perfil.php';
 			  }
 		</script>
 	</head>
-	<body onload="initialize()">
+	<body onload="initialize()","initialize2()">
 		<div class="containermod3">
 			<div class="form">		
 				<form action="primercontacto.proc.php" method="POST">
 					<div class="datos">
 						<div class="infomap">
 						<input type="hidden" name="login2"/>
-						<h2>Dirección alternativa</h2>
+      					<h2>Dirección alternativa</h2>
              			 <h3>*Este campo puede ser omitido.</h3>
+						
 							<input id="address" name="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
 							<input type="button" value="Geocode" onclick="codeAddress()"><br>
 							latitud<input type="text" id="lat" name="lat" />
 							longitud<input type="text" id="lng" name="lng" />
 						</div>
 					</div>
+					
+					<br/>
 					  <div class="buttons">
 						<input type="submit" value="Enviar">
-      					<button>
-    						<a href="perfil.php">omitir!</a>
-    					</button>
-					</div>
+      						<button>
+    							<a href="perfil.php">omitir!</a>
+    						</button>
+    					</div>
 				</form>
 			</div>
 		</div>

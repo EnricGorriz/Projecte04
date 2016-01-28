@@ -14,8 +14,8 @@ h2 {
   margin-bottom: 2%;
   margin-left: 33%;
   margin-top: 8%;
-  max-width: 140px;
-  padding: 3%;
+  max-width: 155px;
+  padding: 2%;
 }
 .containermod2 {
   background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(216, 225, 231, 1) 15%, rgba(181, 198, 208, 1) 73%, rgba(224, 239, 249, 1) 100%) repeat scroll 0 0;
@@ -237,4 +237,7 @@ li a:hover {
 .regis {
   color: white;
   margin-top: -14px;
+}
+.primerospasos > h3 {
+  text-align: center;
 }
