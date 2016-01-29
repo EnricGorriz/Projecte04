@@ -24,15 +24,12 @@
 		</script>
 	</head>
 	<body>
-		<?php
-			if(isset($error)){
-				echo "<h1>Este correo electronico ya esta en uso</h1>";
-			}
-		?>
+		
 		<div class="containermod">
-			<form action="registar_user.php" method="GET">
+			<form action="registro.proc.php" method="POST">
+				<input type="hidden" name="login"/>
 				Mail:<br>
-				<input type="mail" name="mail" maxlength="50"><br>
+				<input type="mail" name="mail" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/><br>
 				Contraseña:<br>
 				<input type="password" name="pass" class="form-input" required/><br>
 				Repite la Contraseña:<br>
@@ -40,13 +37,20 @@
 				<br/>
 				<div class="buttons">
 					<input type="submit" value="Enviar">
-					<a href="usuarios.php">volver!</a>	
+					<a href="login.php">volver!</a>	
 				</div>	
 			</form>
 		
 		</div>
 		<div class="logoin">
 			<img src="img/logo2.png">
+		</div>
+		<div class="error">
+			<?php
+				if(isset($error)){
+					echo "<h1>Este correo electronico ya esta en uso</h1>";
+				}
+			?>
 		</div>
 	</body>
 	<?php  

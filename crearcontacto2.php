@@ -57,7 +57,7 @@ include_once 'header_perfil.php';
 	<body onload="initialize()">
 		<div class="containermod3">
 			<div class="form">		
-				<form action="primercontacto.proc.php" method="POST">
+				<form action="crearcontacto.proc.php" method="POST">
 					<div class="datos">
 						<div class="infomap">
 						<input type="hidden" name="login2"/>

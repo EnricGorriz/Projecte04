@@ -2,7 +2,26 @@
 	Session_Start();
 		if(isset($_SESSION['mail']))$login=1;
 		if(isset($login)){
-		include_once 'header.php';
+		include_once 'header_perfil.php';
+		$id= $_REQUEST['id'];
+		$con = mysqli_connect('localhost', 'root', '', 'bd_contactes');
+			$user= $_SESSION['id'];
+			$sql=("SELECT * FROM `tbl_Contactes` WHERE usu_id = '$user' and con_id='$id'");
+			//echo $sql;
+			$datos = mysqli_query($con, $sql);
+			if(mysqli_num_rows($datos) > 0){
+				while($send = mysqli_fetch_array($datos)){
+          $id=$send['con_id'];
+					$nom = $send['con_nom'];
+					$cognom = $send['con_cognom'];
+					$direccio = $send['con_direccio_principal'];
+					$latitut = $send['con_latitut_principal'];
+					$longitut = $send['con_longitut_principal'];
+					$telefon = $send['con_telefon'];
+					$mail = $send['con_email'];
+				}
+			}
+			mysqli_close($con);
 ?>
  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
  	<link rel="stylesheet" href="css/style.css">
@@ -57,43 +76,45 @@
 			<img src="img/logo2.png">
 		</div>
 <div class="primerospasos">
-  <h2>Primeros Pasos</h2>
-  <p>Bienvenido y muchas gracias por registrarte.</p>
-  <p>Antes de empezar con tu agenda personalizada tienes que completar la información de tu perfil.</p>
+  <h2>Modificar contacto</h2>
+  <p>En esta sección puedes modificar o eliminar la ficha de este usuario</p>
   </div>
 
 <div class="containermod2">
 			<div class="form">		
-		<form action="primercontacto.proc.php" method="POST">
-		<input type="hidden" name="login"/>
-      <div class="datos">
-        <div class="datosder">
-          <h3>Nombre: *</h3>
-		  <input type="text" name="nombre" size="30" maxlength="30" required>
-		  <br>
-		  <h3>Teléfono: *</h3>
-		  <input type="tel" name="telefono" size="30" pattern="[0-9]{9}" required>
-		  <br>
+		<form action="modificarcontacto.proc.php" method="POST">
+		<input type="hidden" name="login" value="<?php echo $id ; ?>"/>
+		
+		<div class="datos">
+			<div class="datosder">
+			  <h3>Nombre: *</h3>
+			  <input type="text" name="nombre" size="30" maxlength="30" value="<?php echo $nom ; ?>"required>
+			  <br>
+			  <h3>Teléfono: *</h3>
+			  <input type="tel" name="telefono" size="30" pattern="[0-9]{9}" value="<?php echo $telefon; ?>" required>
+			  <br>
 		</div>
-      <div class="datosiz">
-        <h3>Apellido: *</h3>
-      <input type="text" name="apellido" size="30" maxlength="30" required>
-        
+		<div class="datosiz">
+			<h3>Apellido: *</h3>
+			<input type="text" name="apellido" size="30" maxlength="30" value="<?php echo $cognom; ?>" required>
+			<h3>Correo Electronico: *</h3>
+			<input type="mail" name="mail" size="30" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php echo $mail; ?>" required/><br>
 			
-      </div>
-      <div class="datoscen">
-			<div class="infomap">
-<br>
-      			<h3>Dirección: * </h3><input id="address" name="address" type="textbox" style="width:60%" value="Mare de déu de bellvitge 100">
+		</div>
+		<div class="datoscen">
+			<div class="infomap"><br>
+      			<h3>Dirección: * </h3><input id="address" name="address" type="textbox" style="width:60%" value="<?php echo $direccio; ?>">
      			<input type="button" value="Verificar" onclick="codeAddress()" required><br><br>
-      			Latitud: <input type="text" id="lat" name="lat"/><br>
-            <br>Longitud:<input type="text" id="lng" name="lng"/>
+      			Latitud: <input type="text" id="lat" name="<?php echo $latitut; ?>"/><br>
+            <br>Longitud:<input type="text" id="lng" name="<?php echo $longitut; ?>"/>
     		</div>
         </div>
       </div>
       <br>
         <div class="buttons">
-			<input type="submit" value="Enviar">
+      <a class="active" href="eliminarcontacto.proc.php?$id=<?php echo $id?>"><img src ='img/delete.png'width='35' heigth='35'/></a>
+			<input type="submit" value="Actualizar">
+
 
         </div>
 
